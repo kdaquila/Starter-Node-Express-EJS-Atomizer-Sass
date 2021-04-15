@@ -11,10 +11,7 @@ app.set('port', port);
 
 // Create HTTP server
 const server = http.createServer(app);
-server.listen({
-  port: port,
-  host: '0.0.0.0',
-})
+server.listen({port: port, host: '0.0.0.0'})
 server.on('error', onError);
 server.on('listening', onListening);
 
