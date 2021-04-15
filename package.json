@@ -1,0 +1,28 @@
+{
+  "name": "site",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start:server": "node server.js",
+    "watch:server": "nodemon --ext js,ejs server.js",
+    "compile:sass": "sass scss:public/stylesheet",
+    "watch:sass": "sass --watch scss:public/stylesheet",
+    "compile:atomizer": "atomizer -c atomizer.config.js -o scss/_atomic.scss -R ./views",
+    "watch:atomizer": "atomizer -c atomizer.config.js -o scss/_atomic.scss -R -w ./views",
+    "watch:all": "run-p -l watch:sass watch:atomizer watch:server"
+  },
+  "dependencies": {
+    "bootstrap": "^4.6.0",
+    "dotenv": "^8.2.0",
+    "ejs": "^3.1.5",
+    "express": "~4.16.1",
+    "http-errors": "~1.6.3",
+    "morgan": "~1.9.1"
+  },
+  "devDependencies": {
+    "atomizer": "^3.8.0",
+    "nodemon": "^2.0.7",
+    "npm-run-all": "^4.1.5",
+    "sass": "^1.32.7"
+  }
+}
