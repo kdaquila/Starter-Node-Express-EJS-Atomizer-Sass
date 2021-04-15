@@ -4,3 +4,4 @@ public/stylesheet
 
 # jetbrains
 .idea/
+scss/_atomic.scss
