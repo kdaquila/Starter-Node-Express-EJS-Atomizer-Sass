@@ -1,11 +1,11 @@
 @use "sass:map";
 @use "sass:color";
-@use "../colors";
-@use "../fonts";
-@use "../sizes";
+@use "colors";
+@use "fonts";
+@use "sizes";
 
 .navbar__background {
-  @extend .bg-blue-20;
+  background-color: white;
   box-shadow: 0 4px 4px 1px rgba(0,0,0,0.25);
 }
 .navbar{
@@ -26,13 +26,12 @@
 
 .navbar__logo{
   @extend .serif-lg;
-  @extend .text-brown-4;
+  @extend .text-brown-2;
   text-decoration: none;
 }
 
 .navbar__linkSection{
-
-  background-color: map.get(colors.$brown-palette, "85");
+  background-color: white;
   border: 2px solid map.get(colors.$brown-palette, "55");
   position:absolute;
   z-index: 2;
@@ -56,7 +55,7 @@
   }
 
   @media screen and (min-width: sizes.$md) {
-    background-color: map.get(colors.$blue-palette, "20");
+    background-color: white;
     border: none;
     position: static;
     display:flex;
@@ -79,17 +78,17 @@
   border-bottom: 1px solid transparent;
 
   &:hover {
-    @include colors.text-brown-3;
+    @include colors.text-brown-2;
   }
 
   @media screen and (min-width: sizes.$md) {
     margin: 0 0 0 40px;
-    @include colors.text-brown-4;
+    @include colors.text-brown-2;
     text-decoration: none;
     border-bottom: 1px solid transparent;
 
     &:hover {
-      @include colors.text-brown-5;
+      @include colors.text-brown-3;
     }
   }
 }
@@ -134,7 +133,7 @@
 }
 .navbar__searchInput {
   @include colors.text-brown-4;
-  @extend .bg-blue-20;
+  background-color: white;
   border-style: solid;
   border-color: map.get(map.get(colors.$font-colors, "brown"), "4");
   border-width: 1px 0 1px 1px;
@@ -152,8 +151,7 @@
   border-style: solid;
   border-color: map.get(map.get(colors.$font-colors, "brown"), "4");
   border-width: 1px 1px 1px 0;
-  background-color: map.get(colors.$blue-palette, "20");
-  background-image: url("../image/magnifying-glass-icon.svg");
+  background-color: white;
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;

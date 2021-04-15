@@ -15,13 +15,13 @@ app.use(logger('dev'));
 
 // setup route to the public folder
 app.use('/image', (req, res, next) => {
-  res.sendFile(path.join(__dirname, 'public', 'image', req.url));
+  res.sendFile(path.join(__dirname, 'image', req.url));
 });
-app.use('/stylesheet', (req, res, next) => {
-  res.sendFile(path.join(__dirname, 'public', 'stylesheet', req.url));
+app.use('/css', (req, res, next) => {
+  res.sendFile(path.join(__dirname, 'css', req.url));
 });
 app.use('/javascript', (req, res, next) => {
-  res.sendFile(path.join(__dirname, 'public', 'javascript', req.url));
+  res.sendFile(path.join(__dirname, 'javascript', req.url));
 });
 
 app.use('/', homeRouter);

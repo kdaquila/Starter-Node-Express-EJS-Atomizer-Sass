@@ -4,9 +4,9 @@
   "private": true,
   "scripts": {
     "start:server": "node server.js",
-    "watch:server": "nodemon --ext js,ejs server.js",
-    "compile:sass": "sass scss:public/stylesheet",
-    "watch:sass": "sass --watch scss:public/stylesheet",
+    "watch:server": "nodemon --ext js,ejs,scss server.js",
+    "compile:sass": "sass scss:css",
+    "watch:sass": "sass --watch scss:css",
     "compile:atomizer": "atomizer -c atomizer.config.js -o scss/_atomic.scss -R ./views",
     "watch:atomizer": "atomizer -c atomizer.config.js -o scss/_atomic.scss -R -w ./views",
     "watch:all": "run-p -l watch:sass watch:atomizer watch:server"
