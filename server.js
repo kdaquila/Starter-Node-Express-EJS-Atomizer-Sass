@@ -4,6 +4,7 @@ require('dotenv').config()
 
 const app = require('./app');
 const http = require('http');
+const killPort = require('kill-port');
 
 // Get port from environment and store in Express.
 const port = normalizePort(process.env.PORT || process.env.APP_PORT || 3000);
