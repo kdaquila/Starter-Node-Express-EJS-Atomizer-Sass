@@ -4,12 +4,11 @@
   "private": true,
   "scripts": {
     "start:server": "node server.js",
-    "watch:server": "nodemon --ext js,ejs,scss server.js",
     "compile:sass": "sass scss:css",
     "watch:sass": "sass --watch scss:css",
     "compile:atomizer": "atomizer -c atomizer.config.js -o scss/_atomic.scss -R ./views",
     "watch:atomizer": "atomizer -c atomizer.config.js -o scss/_atomic.scss -R -w ./views",
-    "watch:all": "run-p -l watch:sass watch:atomizer watch:server"
+    "watch:styles:": "run-p watch:atomizer watch:sass"
   },
   "dependencies": {
     "bootstrap": "^4.6.0",
@@ -21,7 +20,6 @@
   },
   "devDependencies": {
     "atomizer": "^3.8.0",
-    "nodemon": "^2.0.7",
     "npm-run-all": "^4.1.5",
     "sass": "^1.32.7"
   }
