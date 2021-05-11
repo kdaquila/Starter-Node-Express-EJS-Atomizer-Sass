@@ -3,11 +3,13 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start:server": "node server.js",
+    "start": "run-s compile:styles start:server",
+    "start:server": "node server.js", 
+    "compile:atomizer": "atomizer --recursive --namespace=#atomic --rtl -c atomizer.config.js --outfile=scss/_atomic.scss ./views",
     "compile:sass": "sass scss:css",
+    "compile:styles": "run-s compile:atomizer compile:sass",
+    "watch:atomizer": "atomizer --recursive --namespace=#atomic --rtl -c atomizer.config.js --outfile=scss/_atomic.scss --watch=./views",
     "watch:sass": "sass --watch scss:css",
-    "compile:atomizer": "atomizer -c atomizer.config.js -o scss/_atomic.scss -R ./views",
-    "watch:atomizer": "atomizer -c atomizer.config.js -o scss/_atomic.scss -R -w ./views",
     "watch:styles:": "run-p watch:atomizer watch:sass"
   },
   "dependencies": {
